@@ -1,0 +1,412 @@
+/* ============================================================
+   RICE SHOP - CUSTOM STYLESHEET
+   ============================================================
+   
+   This file contains all the styling for the Rice Shop application.
+   Each section is labeled with a comment so you can easily find it.
+   
+   TABLE OF CONTENTS:
+   1. General Body Styles
+   2. Container
+   3. Headings (Page Titles)
+   4. Cards (White boxes)
+   5. Form Elements
+   6. Buttons
+   7. Tables
+   8. Status Badges
+   9. Grid Layout
+   10. Info Labels/Values
+   11. Dividers
+   12. Links
+   13. Messages
+   14. Price Display
+   15. Navigation Bar
+   16. Form Group
+   17. Statistics Cards
+   
+   HOW TO USE:
+   - Find the section you want to change using the comments
+   - Modify the values as needed
+   - Save and refresh your browser
+   
+   ============================================================ */
+
+
+/* ============================================================
+   SECTION 1: GENERAL BODY STYLES
+   ============================================================ */
+body {
+    font-family: Arial, sans-serif;  /* Change to 'Verdana' or 'Georgia' for different fonts */
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;  /* Change to #ffffff for white background */
+}
+
+
+/* ============================================================
+   SECTION 2: CONTAINER
+   ============================================================ */
+.container {
+    max-width: 1200px;  /* Change to 800px for narrower page */
+    margin: 0 auto;  /* Centers the container */
+    padding: 20px;  /* Space around the content */
+}
+
+
+/* ============================================================
+   SECTION 3: HEADINGS (Page Titles)
+   ============================================================ */
+h1, h2, h3 {
+    color: #1f2937;  /* Change to #000000 for black text */
+}
+
+h2 {
+    font-size: 24px;  /* Change to 20px for smaller headings */
+    margin-bottom: 20px;
+}
+
+
+/* ============================================================
+   SECTION 4: CARDS (White boxes on the page)
+   ============================================================ */
+.card {
+    background-color: white;  /* Change to #f0f0f0 for gray cards */
+    border-radius: 8px;  /* Change to 0 for square corners */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);  /* Change 0.1 to 0 for no shadow */
+    padding: 20px;  /* Inside spacing of the card */
+    margin-bottom: 20px;  /* Space below each card */
+}
+
+
+/* ============================================================
+   SECTION 5: FORM ELEMENTS
+   ============================================================ */
+/* Labels for inputs */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #374151;
+}
+
+/* Text inputs, dropdowns, textareas */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;  /* Change to 5px for smaller input boxes */
+    border: 1px solid #d1d5db;  /* Border color - change to #000000 for black */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* When user clicks on input - blue outline appears */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4f46e5;  /* Blue color when clicking */
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+
+/* ============================================================
+   SECTION 6: BUTTONS
+   ============================================================ */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;  /* First number = vertical, second = horizontal */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* GREEN SAVE BUTTON - Use this for the Save button */
+.btn-save {
+    background-color: #10b981;  /* Change to #28a745 for standard green */
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #059669;  /* Darker green when mouse hovers */
+}
+
+/* GRAY CANCEL BUTTON - Use this for Cancel button */
+.btn-cancel, .btn-back {
+    background-color: #6b7280;  /* Change to #808080 for gray */
+    color: white;
+}
+
+.btn-cancel:hover, .btn-back:hover {
+    background-color: #4b5563;  /* Darker gray on hover */
+}
+
+/* BLUE PROCESS BUTTON - Use this for Process buttons */
+.btn-process {
+    background-color: #3b82f6;  /* Change to #007bff for standard blue */
+    color: white;
+}
+
+.btn-process:hover {
+    background-color: #2563eb;  /* Darker blue on hover */
+}
+
+/* RED DELETE BUTTON - Use this for Delete buttons */
+.btn-delete {
+    background-color: #ef4444;  /* Change to #dc3545 for red */
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #dc2626;  /* Darker red on hover */
+}
+
+
+/* ============================================================
+   SECTION 7: TABLES
+   ============================================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #f9fafb;  /* Table header background - change to #ddd for gray */
+    text-align: left;
+    padding: 12px;  /* Space inside header cells */
+    font-weight: bold;
+    color: #6b7280;
+    font-size: 12px;
+    text-transform: uppercase;  /* Makes header text uppercase */
+}
+
+td {
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;  /* Line between rows */
+}
+
+tr:hover {
+    background-color: #f9fafb;  /* Highlight row when hovering */
+}
+
+
+/* ============================================================
+   SECTION 8: STATUS BADGES (Color-coded status labels)
+   ============================================================ */
+/* PENDING - Orange badge */
+.status-pending {
+    background-color: #fed7aa;
+    color: #9a3412;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* COMPLETED - Green badge */
+.status-completed {
+    background-color: #bbf7d0;
+    color: #166534;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* CANCELLED - Red badge */
+.status-cancelled {
+    background-color: #fecaca;
+    color: #991b1b;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* PAID - Green badge */
+.status-paid {
+    background-color: #bbf7d0;
+    color: #166534;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* UNPAID - Red badge */
+.status-unpaid {
+    background-color: #fecaca;
+    color: #991b1b;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* ============================================================
+   SECTION 9: GRID LAYOUT (Columns on the page)
+   ============================================================ */
+.grid {
+    display: grid;
+    gap: 20px;  /* Space between grid items */
+}
+
+.grid-2 {
+    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
+}
+
+.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;  /* 3 equal columns */
+}
+
+.grid-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;  /* 4 equal columns */
+}
+
+
+/* ============================================================
+   SECTION 10: INFO LABELS AND VALUES
+   ============================================================ */
+.info-row {
+    margin-bottom: 15px;
+}
+
+.info-label {
+    font-size: 14px;
+    color: #6b7280;  /* Gray color for labels */
+}
+
+.info-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f2937;  /* Dark color for values */
+}
+
+
+/* ============================================================
+   SECTION 11: DIVIDERS (Horizontal lines)
+   ============================================================ */
+.divider {
+    border-top: 1px solid #e5e7eb;  /* The line style */
+    margin: 20px 0;
+    padding-top: 20px;
+}
+
+
+/* ============================================================
+   SECTION 12: LINKS (Clickable text)
+   ============================================================ */
+.link {
+    color: #4f46e5;  /* Link color - change to #0000ff for blue */
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================================================
+   SECTION 13: SUCCESS AND ERROR MESSAGES
+   ============================================================ */
+/* Success message box - Green */
+.success-message {
+    background-color: #d1fae5;  /* Green background */
+    color: #065f46;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/* Error message box - Red */
+.error-message {
+    background-color: #fee2e2;  /* Red background */
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+
+/* ============================================================
+   SECTION 14: PRICE DISPLAY
+   ============================================================ */
+.price {
+    color: #4f46e5;  /* Price color - change to #000000 for black */
+    font-weight: bold;
+}
+
+.price-large {
+    font-size: 24px;  /* Large price size */
+}
+
+
+/* ============================================================
+   SECTION 15: NAVIGATION BAR (Top menu)
+   ============================================================ */
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 0;  /* Top and bottom padding */
+}
+
+.navbar a {
+    color: #4b5563;  /* Menu link color */
+    text-decoration: none;
+    margin-right: 20px;  /* Space between links */
+}
+
+.navbar a:hover {
+    color: #1f2937;  /* Color when hovering over link */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1f2937;
+}
+
+
+/* ============================================================
+   SECTION 16: FORM GROUPS AND BUTTONS
+   ============================================================ */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+/* ============================================================
+   SECTION 17: STATISTICS CARDS (Dashboard numbers)
+   ============================================================ */
+.stat-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.stat-value {
+    font-size: 32px;  /* Size of the number */
+    font-weight: bold;
+    color: #4f46e5;  /* Number color - change to #000000 for black */
+}
+
+
+/* ============================================================
+   END OF STYLESHEET
+   ============================================================ */
